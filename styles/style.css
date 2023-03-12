@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*Aprendi com o projeto do Lucas >>> https://github.com/correlucas*/
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+img.mobile {
+    display: none;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    min-width: 100%;
+    padding: 40px;
+}
+
+.title {
+    font-family: 'Montserrat', serif;
+    font-size: small;
+    color: hsl(0, 0%, 65%);
+}
+
+.subtitle {
+    font-family: 'Fraunces', serif;
+    font-size: xx-large;
+}
+
+.description {
+    color: hsl(0, 0%, 65%);
+    line-height: 1.5em;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-price {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: 3em;
+}
+
+.old-price {
+    color: hsl(0, 0%, 65%);
+    text-decoration: line-through;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 10px;
+
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    
+    padding: 20px;
+    border-radius: 10px;
+    border: hidden;
+}
+
+.button:hover {
+    background-color: hsl(158, 36%, 30%);
+}
+
+@media (max-width: 730px) {
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 23.75rem;
+    }
+
+    img.desktop {
+        display: none;
+    }
+
+    img.mobile {
+        display: block; 
+    }
+
+    .subtitle {
+        font-size: xx-large;
+    }
+}
